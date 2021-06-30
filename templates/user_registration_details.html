@@ -1,0 +1,61 @@
+<html>
+<head><title>Covid19Epass</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/"><img src='../static/icon.jpg'></img></a>
+	<ul class="navbar-nav me-auto">
+       <li class="nav-item">
+        <a class="nav-link active" href="/">Covid19
+          <span class="visually-hidden">Epass Government Of India.</span>
+       </a>
+      </li>
+	  
+	 </ul>
+    <div class="collapse navbar-collapse" id="navbarColor03">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.worldometers.info/coronavirus/">World wide corona cases</a>
+        </li>
+        
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+<div>
+ <h2 style="text-align: center;">COVID-19 ePass</h2>
+  <hr style="height: 1px;background-color:black;">
+  <h4>Name: {{pl0}}</h4>
+  <h4>Email Id: {{pl1}}</h4>
+  <h4>Travelling From : {{pl2}}, District : {{pl3}}</h4>
+  <h4>Travelling To : {{pl4}}, District : {{pl5}}</h4>
+  <h4>Aadhar Number : {{pl6}}</h4>
+  
+  <h4>PhoneNumber : {{pl7}}</h4>
+  <h4>Date of travel : {{pl8}}</h4>
+  <h4>Status : <u>{{pl9}}</u></h4>
+  <div id="status"></div>
+
+ <script type="text/javascript">
+        if('CONFIRMED'=="{{pl9}}"){
+			document.getElementById("status").innerHTML = '<img style="float:left;" src="../static/approved.png" alt="approved">';
+		  }
+		 else{
+			document.getElementById("status").innerHTML = '<img style="float:left;" src="../static/notapproved.jpg" alt="not approved">';
+		 }
+  </script>
+  </div>
+         
+
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

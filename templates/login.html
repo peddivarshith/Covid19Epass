@@ -1,0 +1,128 @@
+<html>
+<head><title>Covid19Epass</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<style>
+#childe-form{
+display: inline-block;
+}
+</style>
+<script>
+	function update(){
+	var today = new Date();
+	var dd = today.getDate();
+	var mm = today.getMonth()+1; //January is 0!
+	var yyyy = today.getFullYear();
+	if(dd<10){
+        dd='0'+dd
+    } 
+    if(mm<10){
+        mm='0'+mm
+    } 
+	
+	today = yyyy+'-'+mm+'-'+dd;
+	document.getElementById("day").setAttribute("min", today);
+	
+	}
+	
+
+</script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/"><img src='../static/icon.jpg'></img></a>
+	<ul class="navbar-nav me-auto">
+       <li class="nav-item">
+        <a class="nav-link active" href="/">Covid19
+          <span class="visually-hidden">Epass Government Of India.</span>
+       </a>
+      </li>
+	  
+	 </ul>
+    <div class="collapse navbar-collapse" id="navbarColor03">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/login">Apply</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.worldometers.info/coronavirus/">World wide corona cases</a>
+        </li>
+        
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+
+<div style="display: flex">
+        <div>
+           <img src='../static/form.jpg'></img>
+        </div>
+        <div style="flex-grow: 1; margin-right:1%;margin-bottom:2%;">
+            <form action="/form" method="post">
+				 <div class="row">
+					<div class="col">
+						<label  for="firstname">First Name</label>
+						<input  name='firstname' type="text" class="form-control" placeholder="First name" required>
+					</div>
+					<div class="col">
+						<label for="lastname">Last Name</label>
+						<input name='lastname' type="text" class="form-control" placeholder="Last name" required>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<label  for="SourceState">Source State</label>
+						<input  name='source_state' type="text" class="form-control" placeholder="First name" required>
+					</div>
+					<div class="col">
+						<label for="SourceCity">Source City</label>
+						<input name='source_city' type="text" class="form-control" placeholder="Last name" required>
+					</div>
+					<div class="col">
+						<label for="Destinationstate">Destination State</label>
+						<input name='destination_state' type="text" class="form-control" placeholder="Last name" required>
+					</div>
+					<div class="col">
+						<label for="Destinationcity">Destination City</label>
+						<input name='destination_city' type="text" class="form-control" placeholder="Last name" required>
+					</div>
+				</div>
+				<div class="form-group">
+						<label for="exampleInputEmail1">Email address</label>
+						<input name="email" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email" required>
+						<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+				</div>
+				<div class="form-group">
+						<label for="exampleFormControlTextarea1">Reason of Visiting</label>
+						<textarea name="reason" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+				</div>
+				<div>
+						<label for="phonenumber">Phone Number</label>
+						<input name="phoneNumber" type="text" class="form-control" placeholder="Enter your phonenumber" required>
+						
+				</div>
+				<div class="row">
+					<div class="col">
+						<label for="IdProof">Id Proof</label>
+						<input name="idcard" type="text" class="form-control" placeholder="Enter your Idcard" required>
+					</div>
+					<div class="col">
+						<label for="DateOfTravelling">Date of Travelling</label>
+						<input id='day' name='trip' type="date" min='2021-05-21' onclick='update()' class="form-control" placeholder="travel Date" required>
+					</div>
+				</div>
+				<br>
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+        </div>
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
