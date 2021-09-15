@@ -1,7 +1,6 @@
 import requests
 from flask import Flask, render_template, request
 from twilio.rest import Client
-#import requests_cache
 
 account_sid = 'AC18eb24b4597adafe5d234b092c7a7479';
 auth_token = '94d05c3f89a3f19b5b05d0edaf5670f5';
